@@ -40,6 +40,7 @@ If you use our code or models, please cite:
    - gcc (tested with version 5.4.0). The following packages are required:
      * glm
      * OpenCV
+   - nvidia-docker (only if you want directly using our released docker image)
 
 ### Docker Image
 For convenience test purpose, we provide a docker image with configured environment and data. 

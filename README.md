@@ -45,9 +45,14 @@ If you use our code or models, please cite:
 For convenience test purpose, we provide a docker image with configured environment and data. 
 To pull the docker image, please run
 
-    sudo docker pull pableeto/inexact_sa:tf-1.4
+    docker pull pableeto/inexact_sa:tf-1.4
 
 and you are ready to run all the test, training and empirical study experiments inside this docker image.
+To activate the docker environment, please run
+    
+    nvidia-docker run --ipc=host --net host -it pableeto/inexact_sa:tf-1.4 bash
+
+We have already prepared all the data, models and scripts for reproduce our results; 
 see below for how to reproduce our experiments.
 You could also setup the environment by yourself, please follow the instruction below.
 

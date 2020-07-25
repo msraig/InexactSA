@@ -40,7 +40,6 @@ If you use our code or models, please cite:
    - gcc (tested with version 5.4.0). The following packages are required:
      * glm
      * OpenCV
-   - nvidia-docker (only if you want directly using our released docker image)
 
 ### Docker Image
 For convenience test purpose, we provide a docker image with configured environment and data. 
@@ -49,11 +48,11 @@ To pull the docker image, please run
     docker pull pableeto/inexact_sa:tf-1.4
 
 and you are ready to run all the test, training and empirical study experiments inside this docker image.
-To activate the docker environment, please run
+To activate the docker environment, please run (add 'sudo' before docker command if you get 'permission denied' error):
     
-    nvidia-docker run --ipc=host --net host -it pableeto/inexact_sa:tf-1.4 bash
+    docker run --gpus=all --ipc=host --net host -it pableeto/inexact_sa:tf-1.4 bash
 
-We have already prepared all the data, models and scripts for reproduce our results; 
+We have already prepared all the data, models and scripts for reproduce our results in /InexactSA_code under the docker image. 
 see below for how to reproduce our experiments.
 You could also setup the environment by yourself, please follow the instruction below.
 
